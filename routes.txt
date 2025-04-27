@@ -1,0 +1,94 @@
+
+  GET|HEAD        / ........................................................................... welcome
+  POST            _ignition/execute-solution ignition.executeSolution › Spatie\LaravelIgnition › Execu…
+  GET|HEAD        _ignition/health-check ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckCo…
+  POST            _ignition/update-config ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfi…
+  GET|HEAD        admin/dashboard ................... admin.dashboard › Admin\DashboardController@index
+  GET|HEAD        admin/inventory ............. admin.inventory › Admin\SupplyInventoryController@index
+  GET|HEAD        admin/procurement ....... admin.procurement.index › Admin\ProcurementController@index
+  POST            admin/procurement ....... admin.procurement.store › Admin\ProcurementController@store
+  GET|HEAD        admin/procurement/create admin.procurement.create › Admin\ProcurementController@crea…
+  GET|HEAD        admin/procurement/{id} .... admin.procurement.show › Admin\ProcurementController@show
+  GET|HEAD        admin/procurement/{id}/iar admin.procurement.iar › Admin\ProcurementController@gener…
+  GET|HEAD        admin/profile ......................... admin.profile › Admin\ProfileController@index
+  POST            admin/profile/avatar .... admin.profile.avatar › Admin\ProfileController@uploadAvatar
+  PUT             admin/profile/update .......... admin.profile.update › Admin\ProfileController@update
+  GET|HEAD        admin/reports ............... admin.reports.index › Admin\AdminReportController@index
+  POST            admin/reports/generate admin.reports.generate › Admin\AdminReportController@generate
+  GET|HEAD        admin/requests ............ admin.requests.index › Admin\AdminRequestController@index
+  GET|HEAD        admin/requests/{requestId}/issue admin.requests.issue › Admin\SupplyInventoryControl…
+  POST            admin/requests/{requestId}/issue admin.requests.process-issue › Admin\SupplyInventor…
+  PUT             admin/requests/{requestId}/update-status admin.requests.update-status › Admin\AdminR…
+  GET|HEAD        admin/returns .................... admin.returns.index › Admin\ReturnController@index
+  PUT             admin/returns/{id} ............. admin.returns.update › Admin\ReturnController@update
+  GET|HEAD        admin/stock/supplyinventory admin.stock.supplyinventory › Admin\SupplyInventoryContr…
+  POST            admin/stock/supplyinventory admin.stock.supplyinventory.store › Admin\SupplyInventor…
+  GET|HEAD        admin/stock/{id}/details .... admin.stock.details › Admin\StockController@showDetails
+  GET|HEAD        admin/stocks ....................... admin.stocks.index › Admin\StockController@index
+  POST            admin/stocks ....................... admin.stocks.store › Admin\StockController@store
+  GET|HEAD        admin/stocks/create .............. admin.stocks.create › Admin\StockController@create
+  GET|HEAD        admin/stocks/{stock} ................. admin.stocks.show › Admin\StockController@show
+  PUT|PATCH       admin/stocks/{stock} ............. admin.stocks.update › Admin\StockController@update
+  DELETE          admin/stocks/{stock} ........... admin.stocks.destroy › Admin\StockController@destroy
+  GET|HEAD        admin/stocks/{stock}/edit ............ admin.stocks.edit › Admin\StockController@edit
+  PUT             admin/supplies/{id} .. admin.supplies.update › Admin\SupplyInventoryController@update
+  GET|HEAD        admin/supplies/{id}/edit . admin.supplies.edit › Admin\SupplyInventoryController@edit
+  GET|HEAD        admin/supplies/{id}/issuance admin.supplies.issuance › Admin\SupplyInventoryControll…
+  PUT             admin/supplies/{id}/issuance admin.supplies.process-issuance › Admin\SupplyInventory…
+  GET|HEAD        admin/supplies/{id}/stockcard admin.supplies.stockcard › Admin\SupplyInventoryContro…
+  GET|HEAD        admin/tables ............................. admin.tables › Admin\StockController@index
+  GET|HEAD        api/user ............................................................................ 
+  POST            change-password ................................ UserProfileController@changePassword
+  GET|HEAD        dashboard ............................... dashboard › Admin\DashboardController@index
+  POST            forgot-password ........................................... ResetController@sendEmail
+  GET|HEAD        login ..................................... session.login › SessionsController@create
+  POST            login ...................................................... SessionsController@store
+  GET|HEAD        login/forgot-password ........................................ ResetController@create
+  GET|HEAD        logout ................................................... SessionsController@destroy
+  POST            logout .......................................... logout › SessionsController@destroy
+  GET|HEAD        messages ................................... messages.index › MessageController@index
+  POST            messages .............................. messages.send › MessageController@sendMessage
+  GET|HEAD        messages/unread/count ............ messages.unread › MessageController@getUnreadCount
+  GET|HEAD        messages/unread/from/{userId} messages.unread.from › MessageController@getUnreadFrom…
+  GET|HEAD        messages/{user} .............................. messages.chat › MessageController@chat
+  GET|HEAD        my-returns .................................. returns.my › ReturnController@myReturns
+  POST            password/change .............. password.change › UserProfileController@changePassword
+  GET|HEAD        profile ................................................... InfoUserController@create
+  POST            profile .................................................... InfoUserController@store
+  PUT             profile ............................... profile.update › UserProfileController@update
+  GET|HEAD        register ............................... session.register › RegisterController@create
+  POST            register ................................................... RegisterController@store
+  POST            reset-password ............ password.update › ChangePasswordController@changePassword
+  GET|HEAD        reset-password/{token} ................... password.reset › ResetController@resetPass
+  POST            returns ...................................... returns.store › ReturnController@store
+  GET|HEAD        sanctum/csrf-cookie sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
+  GET|HEAD        scan/item/{id} ............................................................ scan.item
+  POST            session .................................................... SessionsController@store
+  GET|HEAD        stock ..................................... stock.index › Admin\StockController@index
+  POST            stock ..................................... stock.store › Admin\StockController@store
+  GET|HEAD        stock/create ............................ stock.create › Admin\StockController@create
+  DELETE          stock/{id} ............................ stock.destroy › Admin\StockController@destroy
+  GET|HEAD        stock/{stock} ............................... stock.show › Admin\StockController@show
+  PUT|PATCH       stock/{stock} ........................... stock.update › Admin\StockController@update
+  DELETE          stock/{stock} ......................... stock.destroy › Admin\StockController@destroy
+  GET|HEAD        stock/{stock}/edit .......................... stock.edit › Admin\StockController@edit
+  POST            upload-avatar .................................... UserProfileController@uploadAvatar
+  GET|HEAD        user-management .............. user-management › Admin\UserManagementController@index
+  GET|HEAD        user-profile .............................................. InfoUserController@create
+  POST            user-profile ............................................... InfoUserController@store
+  GET|HEAD        user/create-request ..... user.requests.createreq › User\UserRequestController@create
+  GET|HEAD        user/dashboard ...................... user.dashboard › User\DashboardController@index
+  GET|HEAD        user/stock/{id}/details ....... user.stock.details › User\StockController@showDetails
+  POST            user/store-request ........... user.requests.store › User\UserRequestController@store
+  GET|HEAD        user/tables ................................ user.tables › User\StockController@index
+  GET|HEAD        user/view-requests .... user.requests.viewrequests › User\UserRequestController@index
+  GET|HEAD        users ............................................ users.index › UserController@index
+  POST            users ............................................ users.store › UserController@store
+  GET|HEAD        users/create ................................... users.create › UserController@create
+  GET|HEAD        users/{user} ....................................... users.show › UserController@show
+  PUT|PATCH       users/{user} ................................... users.update › UserController@update
+  DELETE          users/{user} ................................. users.destroy › UserController@destroy
+  GET|HEAD        users/{user}/edit .................................. users.edit › UserController@edit
+
+                                                                                    Showing [90] routes
+
